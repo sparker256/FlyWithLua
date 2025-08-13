@@ -6716,6 +6716,8 @@ void ResetLuaEngine()
 
     LuaDrawCommand.clear();
     EveryFrameCallbackCommand.clear();
+	do_every_frame_before_code.clear();	
+	do_every_frame_after_code.clear();	
     CallbackCommand.clear();
     LongTimeCallbackCommand.clear();
     NewMetarCommand.clear();
