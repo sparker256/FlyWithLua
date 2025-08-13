@@ -1,5 +1,5 @@
 -- Demonstrate the do_every_frame() and do_every_frame_after() callbacks.
--- Create a flight with 2 or more AI airxcrft, then try this script.
+-- Create a flight with 2 or more AI aicraft, then try this script.
 
 if not SUPPORTS_FLOATING_WINDOWS then
     -- to make sure the script doesn't stop old FlyWithLua versions
@@ -282,5 +282,6 @@ else
 	Callback = 0
 	print("[Grab AI Plane] Later Version Not Found.  Doing Do_Every_frame() only")	
 end
+
 
 do_often("Manage_GrabAIPlane_Window()")
