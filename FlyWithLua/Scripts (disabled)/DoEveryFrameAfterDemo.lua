@@ -269,7 +269,7 @@ function GrabAIPlane_window_build(formation_window, x, y)
 end
 
 	
-add_macro("Show Grab AI Plane Window", "GrabAIPlane_Open_Settings()") -- add menu item
+add_macro("Show after() demo Window", "GrabAIPlane_Open_Settings()") -- add menu item
 
 if PLUGIN_VERSION_NO == nil then PLUGIN_VERSION_NO = "0.0.0" end -- Older version didn't have a a version variable.
 if (xp_ver < 120000 and PLUGIN_VERSION_NO >= "2.7.38") or (xp_ver >= 120000 and PLUGIN_VERSION_NO >= "2.8.13") then -- check if compatible version
@@ -284,3 +284,4 @@ else
 end
 
 do_often("Manage_GrabAIPlane_Window()")
+
