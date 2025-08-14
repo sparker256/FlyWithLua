@@ -1,5 +1,5 @@
 -- Demonstrate the do_every_frame() and do_every_frame_after() callbacks.
--- Create a flight with 2 or more AI aircraft, then try this script.
+-- Create a flight with 2 or more AI aircraft, then invoke this script via it's menu item.
 
 if not SUPPORTS_FLOATING_WINDOWS then
     -- to make sure the script doesn't stop old FlyWithLua versions
@@ -53,7 +53,7 @@ local Window_Is_Open = false
 local ShowGrabAIPlaneWindow = false
 local HideGrabAIPlaneWindow = false
 local xp_ver = get("sim/version/xplane_internal_version")
-local Callback = 0
+local Callback = 0 -- which callback to use
 
 
 -----------------------------------
@@ -113,18 +113,19 @@ ffi.cdef("int XPLMAcquirePlanes ( char ** inAIRCRAFT_PATH, XPLMPlanesAvailable_f
 ffi.cdef("void XPLMDisableAIForPlane (int inAI)")
 ffi.cdef("void XPLMReleasePlanes(void)")
 
-XPLM.XPLMCountAircraft (w1 , w2 , w3)
+-- Get aircraft details
+XPLM.XPLMCountAircraft (w1 , w2 , w3)  
 PLANE_COUNT, PLANE_TOTAL, PLANE_PLUGIN = w1[0], w2[0], w3[0]
 
 
-function GrabAIPlane_on_close_floating_window()
+function GrabAIPlane_on_close_floating_window() -- cleanup when nthe window is closed. Needs to be global.
 
 	Window_Is_Open = false
-	ReleaseAIPlane()
+	ReleaseAIPlanes()
 
 end
 
-local function GrabAIPlane_hide_window() 
+local function GrabAIPlane_hide_window() -- Hide the window
 
     if Window_Is_Open then
 		float_wnd_destroy(GrabAIPlane_window)
@@ -133,11 +134,11 @@ local function GrabAIPlane_hide_window()
 	 
 end	
 
-local function GrabAIPlane_show_window()
+local function GrabAIPlane_show_window() -- Show the app window. Needs to be global.
 
    if(Window_Is_Open == false) then	
-		local Window_Title = string.format("Grab AI Plane Demo", view_id)
-		GrabAIPlane_window = float_wnd_create(536, 90, 1, true) -- Width / Height
+		local Window_Title = string.format("do_every_frame_after() Demo", view_id)
+		GrabAIPlane_window = float_wnd_create(550, 90, 1, true) -- Width / Height
 		if(GrabAIPlane_window == nil) then
 			return
 		end
@@ -149,13 +150,13 @@ local function GrabAIPlane_show_window()
 	
 end
 
-function Manage_GrabAIPlane_Window()
+function Manage_GrabAIPlane_Window() -- needs to be a global function so do_often() can see it.
 
-	if(ShowGrabAIPlaneWindow == true) then  -- Window is opened via a flight loop, not a callback.
+	if(ShowGrabAIPlaneWindow == true) then  -- This indow is opened via a flight loop, not a callback.
 		GrabAIPlane_show_window()
 		ShowGrabAIPlaneWindow = false
 	else
-		if(HideGrabAIPlaneWindow == true) then -- Window is closed via a flight loop, not a callback.
+		if(HideGrabAIPlaneWindow == true) then -- This window is closed via a flight loop, not a callback.
 			GrabAIPlane_hide_window()
 			HideGrabAIPlaneWindow = false
 		end
@@ -163,13 +164,13 @@ function Manage_GrabAIPlane_Window()
 	
 end
 
-function acquire_AIplanes_callback()
+function acquire_AIplanes_callback() -- This is requred so that when released, the AI plane will return under control of x-plane. Needs to be global.
     XPLMSpeakString("Planes acquired callback invoked.")
 end
 
-function AcquireAIPlane()
+local function AcquireAIPlanes()
 
-	if XPLM.XPLMAcquirePlanes(ai_plane_array, acquire_AIplanes_callback, nil) ~= 1 then  -- Smoothchat  Grab the AI Plane details
+	if XPLM.XPLMAcquirePlanes(ai_plane_array, acquire_AIplanes_callback, nil) ~= 1 then  -- Grab the AI Plane details
 		XPLMSpeakString("XPLM Acquire Planes did not succeed. Another plugin may be controlling the AI aircraft")
 	else
 		XPLM.XPLMDisableAIForPlane(1)
@@ -180,7 +181,7 @@ function AcquireAIPlane()
 	
 end
 
-function ReleaseAIPlane()
+function ReleaseAIPlanes() -- Needs to be global so GrabAIPlane_on_close_floating_window()can see it.
 
 	XPLM.XPLMReleasePlanes()	
 	XPLM.XPLMCountAircraft (w1 , w2 , w3)
@@ -189,8 +190,7 @@ function ReleaseAIPlane()
 	Callback = 0
 end
 
-function GrabAIPlane_Open_Settings() --smoothchat
-
+function GrabAIPlane_Open_Settings() -- set a variable that will cause the doOften() to open the window. Needs to be global.
 	if (Window_Is_Open == false) then
 		ShowGrabAIPlaneWindow = true
 	else
@@ -199,20 +199,20 @@ function GrabAIPlane_Open_Settings() --smoothchat
 	
 end
 
-function Do_GrabAIPlane()
+function Do_GrabAIPlane() -- needs to be a global function so do_every_frame() can see it.
 
-	if Callback == 1 then
-		wPlaneX1 = gPlaneX
-		wPlaneY1 = gPlaneY
-		wPlaneZ1 = gPlaneZ + 20
-		wPlaneTheta1 = gPlaneTheta		
-		wPlanePsi1 = gPlanePsi
-		wPlanePhi1 = gPlanePhi		
+	if Callback == 1 then 
+		wPlaneX1 = gPlaneX 		-- move the AI plane near to the user plane
+		wPlaneY1 = gPlaneY 		--                 ""
+		wPlaneZ1 = gPlaneZ + 20 --                 ""  offset by 20
+		wPlaneTheta1 = gPlaneTheta	-- copy the user plane's attitude	
+		wPlanePsi1 = gPlanePsi	--                 ""
+		wPlanePhi1 = gPlanePhi	--                 "" 	
 	end
 
 end
 
-function Do_GrabAIPlaneAfter()
+function Do_GrabAIPlaneAfter() -- needs to be a global function so do_every_frame_after() can see it.
 
 	if Callback == 2 then
 		wPlaneX2 = gPlaneX
@@ -239,21 +239,21 @@ function GrabAIPlane_window_build(formation_window, x, y)
 		imgui.TextUnformatted("")	
 	end
 	imgui.TextUnformatted("")
-
+	-- check if the FlyWithLUA version is compatible with the do__every+_frame_after() callback.
 	if (xp_ver < 120000 and PLUGIN_VERSION_NO >= "2.7.38") or (xp_ver >= 120000 and PLUGIN_VERSION_NO >= "2.8.13") then
-		if PLANE_COUNT < 3 then
+		if PLANE_COUNT < 3 then -- do we have enough AI planes
 			imgui.TextUnformatted("Not enough AI Planes Available. Please add 2 AI planes and start again.")
 		else		
-			if imgui.Button("Grab Ai Plane") then
-				AcquireAIPlane()
+			if imgui.Button("Grab AI Plane") then
+				AcquireAIPlanes()
 			end	
 			imgui.SameLine()
 			if ACQUIRED == 1 then
 				if imgui.Button("Release AI Plane") then
-					ReleaseAIPlane()
+					ReleaseAIPlanes()
 				end
 				imgui.SameLine()		
-				if imgui.Button("Use Legacy Callback") then
+				if imgui.Button("Use Standard Callback") then
 					Callback = 1
 				end
 					imgui.SameLine()
@@ -269,18 +269,18 @@ function GrabAIPlane_window_build(formation_window, x, y)
 end
 
 	
-add_macro("Show GrabA I Plane Settings", "GrabAIPlane_Open_Settings()") 
+add_macro("Show Grab AI Plane Window", "GrabAIPlane_Open_Settings()") -- add menu item
 
-if PLUGIN_VERSION_NO == nil then PLUGIN_VERSION_NO = "0.0.0" end
-if (xp_ver < 120000 and PLUGIN_VERSION_NO >= "2.7.38") or (xp_ver >= 120000 and PLUGIN_VERSION_NO >= "2.8.13") then
+if PLUGIN_VERSION_NO == nil then PLUGIN_VERSION_NO = "0.0.0" end -- Older version didn't have a a version variable.
+if (xp_ver < 120000 and PLUGIN_VERSION_NO >= "2.7.38") or (xp_ver >= 120000 and PLUGIN_VERSION_NO >= "2.8.13") then -- check if compatible version
 	do_every_frame("Do_GrabAIPlane()")
 	do_every_frame_after("Do_GrabAIPlaneAfter()")	
 	Callback = 0
-	print("[Grab AI Plane] Later Version Found.  Doing both Do_Every_frame_after() and Do_Every_frame()")
+	print("[Grab AI Plane] Later Version Found.  Doing both do_every_frame_after() and do_every_frame()") -- write to log.txt
 else
 	do_every_frame_after("Do_GrabAIPlane()")
 	Callback = 0
-	print("[Grab AI Plane] Later Version Not Found.  Doing Do_Every_frame() only")	
+	print("[Grab AI Plane] Later Version Not Found.  Doing do_every_frame() only")	
 end
 
 do_often("Manage_GrabAIPlane_Window()")
