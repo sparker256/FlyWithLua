@@ -276,12 +276,13 @@ if (xp_ver < 120000 and PLUGIN_VERSION_NO >= "2.7.38") or (xp_ver >= 120000 and 
 	do_every_frame("Do_GrabAIPlane()")
 	do_every_frame_after("Do_GrabAIPlaneAfter()")	
 	Callback = 0
-	print("[Grab AI Plane] Later Version Found.  Doing both do_every_frame_after() and do_every_frame()") -- write to log.txt
+	print("[do_every_frame_after() demo] Later Version Found.  Doing both do_every_frame_after() and do_every_frame()") -- write to log.txt
 else
 	do_every_frame_after("Do_GrabAIPlane()")
 	Callback = 0
-	print("[Grab AI Plane] Later Version Not Found.  Doing do_every_frame() only")	
+	print("[do_every_frame_after() demo] Later Version Not Found.  Doing do_every_frame() only")	
 end
 
 do_often("Manage_GrabAIPlane_Window()")
+
 
