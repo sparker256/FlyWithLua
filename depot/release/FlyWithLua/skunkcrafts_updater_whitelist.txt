@@ -1,0 +1,211 @@
+Custom_Fonts/Custom_Fonts.txt|700870917
+Custom_Fonts/Roboto-Bold.ttf|1530149206
+Custom_Fonts/Roboto-BoldItalic.ttf|400767586
+Custom_Fonts/Roboto-Italic.ttf|1414978390
+Custom_Fonts/Roboto-Light.ttf|2990696390
+Custom_Fonts/Roboto-Medium.ttf|2893460152
+Custom_Fonts/Roboto-Regular.ttf|2823813019
+Custom_Fonts/RobotoMono-Regular.ttf|2104058896
+Documentation/ChangeLog.txt|1893578367
+Documentation/Creating a digital instrument.pdf|2701688954
+Documentation/Ein_Arcaze_USB_ansteuern.epub|854573180
+Documentation/Ein_Arcaze_USB_ansteuern.md|1772623326
+Documentation/First_Steps_Programming_FlyWithLua.epub|513387515
+Documentation/First_Steps_Programming_FlyWithLua.md|2309893328
+Documentation/First_Steps_Programming_FlyWithLua.pdf|1905268289
+Documentation/FlyWithLua_Checklists_Manual_EN.pdf|1333256165
+Documentation/FlyWithLua_Dear_ImGui_Font_Guide.md|3523018144
+Documentation/FlyWithLua_Dear_ImGui_Font_Guide.pdf|4225454294
+Documentation/FlyWithLua_LuiGee_UX_Guide.md|2904885636
+Documentation/FlyWithLua_LuiGee_UX_Guide.pdf|1497827912
+Documentation/FlyWithLua_Manual_en.epub|2214912086
+Documentation/FlyWithLua_Manual_en.pdf|353288994
+Documentation/FlyWithLua_Script_Subfolders_and_Skunkcrafts_Guide.md|1531315137
+Documentation/FlyWithLua_Script_Subfolders_and_Skunkcrafts_Guide.pdf|455242374
+Documentation/FlyWithLua_XSB_Einstieg_DE.pdf|2020030028
+Documentation/HeliTrim_Manual_en.pdf|3741343172
+Documentation/Linux_LDD_Output.txt|4231129916
+Internals/EnterLineOfCode.lua|818165467
+Internals/FlyWithLua.exit|1933041503
+Internals/FlyWithLua.ini|2439380861
+Internals/SaveInitialAssignments.ini|2213658515
+Internals/XSquawkBox.lua|3245815605
+Internals/arcaze.lua|1988239663
+Internals/bubbles.lua|2935120441
+Internals/button_sniffer.lua|1982551109
+Internals/graphics.lua|1024803632
+Internals/keystroke_sniffer.lua|3671156981
+Internals/md5.lua|4291951915
+Internals/memory heartbeat.lua|3919879682
+Internals/memutils.lua|725730710
+Internals/radio.lua|2080797783
+Internals/show pilots head info.lua|1274577369
+Internals/stringzutils.lua|2171180336
+Modules/HUD.lua|4209467512
+Modules/LuaXml.lua|3906943840
+Modules/SMA_smoother.lua|1882180870
+Modules/instrument.lua|2640189229
+Modules/jjjLib1.lua|656992682
+Modules/jjjLib1.md|116638613
+Modules/lfs_ffi.lua|2480225999
+Modules/ltn12.lua|690496488
+Modules/mime.lua|3736812139
+Modules/socket.lua|1425380012
+Modules/socket/ftp.lua|2006415906
+Modules/socket/headers.lua|2925171623
+Modules/socket/http.lua|1539814676
+Modules/socket/smtp.lua|2742678530
+Modules/socket/tp.lua|136651951
+Modules/socket/url.lua|1886845685
+README.txt|252308143
+Scripts (disabled)/3D head positions.lua|2568723024
+Scripts (disabled)/ATC_debug_logging.lua|3496841948
+Scripts (disabled)/Check_DataRef.lua|3961242037
+Scripts (disabled)/Checklists/ICAO_A139_checklist.txt|3005301309
+Scripts (disabled)/Checklists/README.txt|89491932
+Scripts (disabled)/Checklists/TAILNUMBER_N172SP_clist.txt|3365555249
+Scripts (disabled)/Checklists/TAILNUMBER_N750ZZ_checklist.txt|1864782120
+Scripts (disabled)/Checklists/global_checklist.txt|2095538570
+Scripts (disabled)/DataRefAccessSpeed.lua|2571282967
+Scripts (disabled)/DoEveryFrameAfterDemo.lua|21609952
+Scripts (disabled)/FFI test (Windows only).lua|4122168561
+Scripts (disabled)/Flip_Squawk_Code_for_VFR.lua|1593141584
+Scripts (disabled)/Fmod_Demo.lua|2338041534
+Scripts (disabled)/GPX/FL95_EDDN_nach_EDDL.gpx|3073761449
+Scripts (disabled)/GPX/FL95_EDDS_nach_EDSB.gpx|2991211369
+Scripts (disabled)/GPX/Meinerzhagen nach Dortmund.gpx|4166462955
+Scripts (disabled)/HID test.lua|553550656
+Scripts (disabled)/HUD module example.lua|2445015066
+Scripts (disabled)/HUD module test.lua|880242635
+Scripts (disabled)/Heading_helper.lua|3055058852
+Scripts (disabled)/HeliTrim.lua|2268611647
+Scripts (disabled)/HeliTrim_XP10.lua|1845445770
+Scripts (disabled)/Instrumententest.lua|1700187080
+Scripts (disabled)/Joystick_Sensitivity.lua|3044990269
+Scripts (disabled)/OpenAL_Test.lua|4009940156
+Scripts (disabled)/OpenDoors.lua|2405724236
+Scripts (disabled)/Place Aircraft At Airport ICAO.lua|4234011321
+Scripts (disabled)/Place Aircraft At Location.lua|1215048883
+Scripts (disabled)/QNH_helper.lua|2242047372
+Scripts (disabled)/Radio_Entry_Window.jpg|2339454848
+Scripts (disabled)/Set_LOD_bias_rat_using_ffi.lua|121961540
+Scripts (disabled)/Set_fog_be_gone_using_ffi.lua|1647763194
+Scripts (disabled)/SimpleTrim.lua|3974531363
+Scripts (disabled)/Situation_Tests/KCLE_Cessna Skyhawk Situation.sit|2651753632
+Scripts (disabled)/Situation_Tests/KDEN_Cessna Skyhawk Situation.sit|485590737
+Scripts (disabled)/Situation_Tests/KERI_Cessna Skyhawk Situation.sit|535912607
+Scripts (disabled)/Situation_Tests/KROC_Cessna Skyhawk Situation.sit|2348137404
+Scripts (disabled)/Situation_Tests/KYNG_Cessna Skyhawk Situation.sit|2641193027
+Scripts (disabled)/SpeakNoText.lua|1963388281
+Scripts (disabled)/StringTest.lua|1589308102
+Scripts (disabled)/VFR autopilot helper.lua|4275544050
+Scripts (disabled)/VFR weather.lua|59835303
+Scripts (disabled)/WaitForCommandToBeCreated.lua|2348752897
+Scripts (disabled)/XPLMFindCommand_Test.lua|1066985946
+Scripts (disabled)/XPLMSpeakString_Test.lua|2865044895
+Scripts (disabled)/XSB_helper.lua|3948136983
+Scripts (disabled)/XSB_text_message_bubbles.lua|74532698
+Scripts (disabled)/alt_set_1000.lua|1301386727
+Scripts (disabled)/anti rollover brake.lua|3918462037
+Scripts (disabled)/automatic set qnh.lua|1673865550
+Scripts (disabled)/automatic_cowl_flaps.lua|3435322443
+Scripts (disabled)/autopilot 100ft up-down command.lua|2127388383
+Scripts (disabled)/autopilot infoline.lua|1495280756
+Scripts (disabled)/bubble copilot.lua|296215914
+Scripts (disabled)/call ATC on airport.lua|1244188396
+Scripts (disabled)/command_begin_example.lua|1637961915
+Scripts (disabled)/coolie hat radio.lua|124607514
+Scripts (disabled)/custom datarefs.lua|140173768
+Scripts (disabled)/directory test.lua|3029254147
+Scripts (disabled)/display clist.lua|3621441890
+Scripts (disabled)/flip boolean.lua|646549901
+Scripts (disabled)/floating_wnd_demo.lua|3621404174
+Scripts (disabled)/floating_wnd_demo_SCREEN_HEIGHT.lua|3673492340
+Scripts (disabled)/floating_wnd_get_handle_ffi_test-IanQ.lua|2574876431
+Scripts (disabled)/floating_wnd_graphics_test.lua|3817879062
+Scripts (disabled)/floating_wnd_hasi.lua|3141694160
+Scripts (disabled)/floating_wnd_new_XPLM_methods.lua|2588772222
+Scripts (disabled)/floating_wnd_reference_test.lua|3976245221
+Scripts (disabled)/floating_wnd_show gear deployment.lua|3937992246
+Scripts (disabled)/floating_wnd_test.lua|3729851303
+Scripts (disabled)/floating_wnd_text_font_color_test.lua|2130543712
+Scripts (disabled)/get_axis_assignments.lua|1666579454
+Scripts (disabled)/gpu.lua|4009581566
+Scripts (disabled)/graphics test.lua|4173858768
+Scripts (disabled)/heading speed altitude instrument.lua|233090036
+Scripts (disabled)/hid_filled_feature_report_demo.lua|2252342000
+Scripts (disabled)/homebrew single engine piston aircraft ignition key example.lua|2237159909
+Scripts (disabled)/imgui_buttons_demo.lua|15156301
+Scripts (disabled)/imgui_child_window.lua|3246082407
+Scripts (disabled)/imgui_child_window_set_position.lua|4143434940
+Scripts (disabled)/imgui_create_xp12_fdr_file.lua|1203419842
+Scripts (disabled)/imgui_custom_font_demo_window.lua|3045621296
+Scripts (disabled)/imgui_demo.jpg|1350329095
+Scripts (disabled)/imgui_demo.lua|2847810709
+Scripts (disabled)/imgui_font_fallback_and_reload_test.lua|1854915459
+Scripts (disabled)/imgui_fonts_demo_window.lua|1595452612
+Scripts (disabled)/imgui_fonts_demo_window_macro.lua|3750310214
+Scripts (disabled)/imgui_fps.lua|2734901046
+Scripts (disabled)/imgui_frame_time_info.lua|3502224377
+Scripts (disabled)/imgui_get_lat_lon.lua|3814513576
+Scripts (disabled)/imgui_hello_world.lua|1867628385
+Scripts (disabled)/imgui_load_situation_demo.lua|538669238
+Scripts (disabled)/imgui_named_fonts_demo.lua|516176789
+Scripts (disabled)/imgui_set_failures.lua|3736096349
+Scripts (disabled)/imgui_set_position_demo.lua|1896500299
+Scripts (disabled)/imgui_show_axis.lua|1780716189
+Scripts (disabled)/imgui_show_hide_window_with_command.lua|3798190650
+Scripts (disabled)/imgui_show_hide_window_with_dataref.lua|2742395182
+Scripts (disabled)/imgui_show_plugin_info_in_vr.lua|2054316113
+Scripts (disabled)/imgui_test_write_xlua_datarefs.lua|1690499391
+Scripts (disabled)/imgui_xp12_sound_settings.lua|499303871
+Scripts (disabled)/imgui_yoke_pedals_visualizer.lua|396057382
+Scripts (disabled)/keep monitor alive on Windows.lua|2538056009
+Scripts (disabled)/lean_helper.lua|2869766076
+Scripts (disabled)/lfs_testscript.lua|251138694
+Scripts (disabled)/little arcaze radio.lua|1329969078
+Scripts (disabled)/magic table test.lua|3561983810
+Scripts (disabled)/mixture_spline.lua|2954812562
+Scripts (disabled)/new little arcaze radio.lua|307053713
+Scripts (disabled)/play_sound_with_dataref.lua|3646359255
+Scripts (disabled)/program GPX files into FMC.lua|1559584675
+Scripts (disabled)/quick settings.lua|3159487586
+Scripts (disabled)/reload scenery.lua|2165498035
+Scripts (disabled)/show gear deployment.lua|1838654038
+Scripts (disabled)/show last metar and next airport.lua|958326280
+Scripts (disabled)/show pilots head info.lua|1274577369
+Scripts (disabled)/simple mouse driven radio.lua|1968926126
+Scripts (disabled)/smooth example.lua|2902393239
+Scripts (disabled)/stupid bubble test.lua|1985453274
+Scripts (disabled)/test 32-bit.lua32.txt|4072952301
+Scripts (disabled)/test 64-bit.lua64|680790634
+Scripts (disabled)/test GLUT fonts.lua|2473840743
+Scripts (disabled)/test command.lua|866826471
+Scripts (disabled)/test commands.lua|895888810
+Scripts (disabled)/test draw_string_with_non_standard_coordinates.lua|1165700650
+Scripts (disabled)/test mouse wheel handler.lua|261276040
+Scripts (disabled)/test xml library LuaXML.lua|907867533
+Scripts (disabled)/test.xml|2015912251
+Scripts (disabled)/test_luasocket.lua|1673275739
+Scripts (disabled)/transponder_helper.lua|364779756
+Scripts (disabled)/visual_trim_system.lua|1564589955
+Scripts (disabled)/zzzz_SetMyButtonsAndAxis (will kill your assignments).lua|2544096333
+Scripts/CockpitNotes/CockpitNotes.lua|-1
+Scripts/CockpitNotes/notes/cockpit_notes.md|-1
+Scripts/CockpitNotes/notes/diversion_briefing.md|-1
+Scripts/CockpitNotes/notes/fuel_and_weight.md|-1
+Scripts/CockpitNotes/notes/ifr_navlog.md|-1
+Scripts/CockpitNotes/notes/metar_taf_scratchpad.md|-1
+Scripts/CockpitNotes/skunkcrafts_updater.cfg|-1
+Scripts/ImGui_LuiGee_Demo.lua|330120780
+fwl_prefs.ini|-1
+lin_x64/FlyWithLua.xpl|3121409963
+mac_x64/FlyWithLua.xpl|630801569
+skunkcrafts/channel.cfg|-1
+skunkcrafts/channels/beta.cfg|-1
+user.exit|-1
+user.ini|-1
+win_x64/FlyWithLua.xpl|2857229263
+win_x64/OpenAL32.dll|4276942547
+win_x64/glut64.dll|381975516
+win_x64/libglut-0__.dll|381975516
