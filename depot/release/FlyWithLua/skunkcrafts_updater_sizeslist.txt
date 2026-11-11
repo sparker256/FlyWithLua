@@ -201,8 +201,6 @@ Scripts/ImGui_LuiGee_Demo.lua|69705
 fwl_prefs.ini|2787
 lin_x64/FlyWithLua.xpl|3587824
 mac_x64/FlyWithLua.xpl|6552944
-skunkcrafts/channel.cfg|13
-skunkcrafts/channels/beta.cfg|106
 user.exit|71
 user.ini|108
 win_x64/FlyWithLua.xpl|6617239
