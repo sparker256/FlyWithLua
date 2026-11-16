@@ -199,11 +199,11 @@ Scripts/CockpitNotes/notes/metar_taf_scratchpad.md|2791
 Scripts/CockpitNotes/skunkcrafts_updater.cfg|132
 Scripts/ImGui_LuiGee_Demo.lua|69705
 fwl_prefs.ini|2933
-lin_x64/FlyWithLua.xpl|3752480
+lin_x64/FlyWithLua.xpl|3748192
 mac_x64/FlyWithLua.xpl|6817616
 user.exit|71
 user.ini|108
-win_x64/FlyWithLua.xpl|6859115
+win_x64/FlyWithLua.xpl|6858603
 win_x64/OpenAL32.dll|1795072
 win_x64/glut64.dll|272896
 win_x64/libglut-0__.dll|272896
