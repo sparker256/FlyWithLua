@@ -6,7 +6,7 @@ Custom_Fonts/Roboto-Light.ttf|159200
 Custom_Fonts/Roboto-Medium.ttf|159296
 Custom_Fonts/Roboto-Regular.ttf|159108
 Custom_Fonts/RobotoMono-Regular.ttf|125748
-Documentation/ChangeLog.txt|6983
+Documentation/ChangeLog.txt|7164
 Documentation/Creating a digital instrument.pdf|1732597
 Documentation/Ein_Arcaze_USB_ansteuern.epub|615646
 Documentation/Ein_Arcaze_USB_ansteuern.md|35105
