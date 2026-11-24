@@ -6,7 +6,7 @@ Custom_Fonts/Roboto-Light.ttf|159200
 Custom_Fonts/Roboto-Medium.ttf|159296
 Custom_Fonts/Roboto-Regular.ttf|159108
 Custom_Fonts/RobotoMono-Regular.ttf|125748
-Documentation/ChangeLog.txt|7543
+Documentation/ChangeLog.txt|7768
 Documentation/Creating a digital instrument.pdf|1732597
 Documentation/Ein_Arcaze_USB_ansteuern.epub|615646
 Documentation/Ein_Arcaze_USB_ansteuern.md|35105
@@ -236,11 +236,11 @@ Scripts/CockpitNotes/notes/metar_taf_scratchpad.md|2791
 Scripts/CockpitNotes/skunkcrafts_updater.cfg|132
 Scripts/ImGui_LuiGee_Demo.lua|90866
 fwl_prefs.ini|2933
-lin_x64/FlyWithLua.xpl|4309336
-mac_x64/FlyWithLua.xpl|7725680
+lin_x64/FlyWithLua.xpl|4313840
+mac_x64/FlyWithLua.xpl|7726144
 user.exit|71
 user.ini|108
-win_x64/FlyWithLua.xpl|7542902
+win_x64/FlyWithLua.xpl|7547587
 win_x64/OpenAL32.dll|1795072
 win_x64/glut64.dll|272896
 win_x64/libglut-0__.dll|272896
